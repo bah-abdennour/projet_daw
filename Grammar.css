@@ -1,0 +1,741 @@
+/* 
+   tag in html 
+      html douvument structure 
+         <!DOCTYPE html>
+         <html>
+         <head>
+         <body>
+      metadata & head element 
+         <title> => title page
+         <meta> => information about the page
+         <link> => link to external resources like css file
+         <style> => internal css
+         <script> => link to external js file or internal js
+         <base> => base url for all relative urls in the page
+      section & layout element 
+         <header> => header of the page
+         <nav> => navigation menu
+         <main> => main content of the page
+         <section> => section of the page
+         <article> => article of the page
+         <aside> => sidebar or related content
+         <footer> => footer of the page
+         <details> => additional details that can be toggled
+         <summary> => summary of the details element
+      text / content element
+         <h1> to <h6> => headings
+         <p> => paragraph
+         <span> => inline container
+         <div> => block container
+         <hr> => horizontal rule
+         <br> => line break
+         <pre> => preformatted text
+         <blockquote> => block quotation
+      inline text formatting
+         <b> => bold text
+         <em> => emphasized text
+         <strong> => strong importance text
+         <i> => italic text
+         <small> => smaller text
+         <mark> => highlighted text
+         <code> => inline code
+         <sub> => subscript text
+         <sup> => superscript text 
+         <u> => underlined text
+         <s> => strikethrough text
+         <kbd> => keyboard input text
+         <var> => variable text
+         <abbr> => abbreviation text
+         <cite> => citation text
+         <dfn> => definition text
+         <q> => inline quotation
+      lists
+         <ul> => unordered list
+         <ol> => ordered list
+         <li> => list item
+         <dl> => description list
+         <dt> => description term
+         <dd> => description definition
+      linke & navigation
+         <a> => anchor / link
+      media
+         <img> => image
+         <audio> => audio content
+         <video> => video content
+         <source> => media source
+         <picture> => responsive images
+         <track> => text tracks for media
+         <map> => image map
+         <area> => area in image map
+         <figcaption> => caption for figure
+         <figure> => self-contained content
+      tables
+         <table> => table
+         <thead> => table header
+         <tbody> => table body
+         <tfoot> => table footer
+         <tr> => table row
+         <th> => table header cell
+         <td> => table data cell
+         <caption> => table caption
+         <col> => table column
+         <colgroup> => group of table columns
+      forms & input
+         <form> => form
+         <input> => input field
+         <textarea> => multi-line text input
+         <select> => drop-down list
+         <option> => option in drop-down list
+         <optgroup> => group of options in drop-down list
+         <button> => button
+         <label> => label for input
+         <fieldset> => group of related form elements
+         <legend> => caption for fieldset
+         <datalist> => list of predefined options for input
+         <output> => result of a calculation
+      interactive elements
+         <dialog> => dialog box
+         <menu> => menu of commands
+         <menuitem> => command in menu
+      semantic /meaningful tags
+         <time> => date and/or time
+         <data> => machine-readable data
+      scripting
+         <script> => script code
+         <noscript> => alternative content for no script
+   
+   
+   any element have landmark and center any element in page come in top-left 
+      for put center in element use translate(-50%,-50%) with position absolute and top 50% left 50% 
+   
+
+   any element 
+      tag => exa: p div h1 ...
+      class => exa: .text .header ...
+      id => exa: #submit #main ...
+      universal => * => all elements
+
+   
+   attribute 
+      required =>  تجعل الحقل مطلوب
+
+
+   pseudo-class
+      1- structural pseudo-class
+         :hover معناه عند وضع المؤشر عليه يتبدل خصائص
+         :focus معناه عند النقر و كتابة عليه يتبدل خصائص
+         :active معناه عند الضغط عليه يتبدل خصائص
+         :link معناه عند وجود رابط يتبدل خصائص
+         :visited معناه عند زيارة الرابط يتبدل خصائص
+         :first-of-type => يحدد اول عنصر من نوعه داخل الاب7
+         :not(:hover or another patern) => ينفي حالة معينة
+         tag:first-child => يحدد اول عنصر من نوعه داخل الاب
+         tag:last-child => يحدد اخر عنصر من نوعه داخل الاب
+         tag:nth-child(n) => يحدد العنصر رقم n من نوعه داخل الاب
+            exa: p:nth-child(2) => يحدد ثاني فقرة داخل الاب
+         ::before 
+         ::after
+      2- state pseudo-class
+         :checked => يحدد العنصر المحدد (مثل checkbox أو radio)
+         :disabled => يحدد العنصر المعطل
+         :enabled => يحدد العنصر الممكّن
+         :valid => يحدد العنصر الذي يحتوي على قيمة صحيحة
+         :invalid => يحدد العنصر الذي يحتوي على قيمة غير صحيحة
+         :required => يحدد الحقول المطلوبة في النماذج
+         :optional => يحدد الحقول غير المطلوبة في النماذج
+      3- pseudo-element
+         ::first-letter => يحدد أول حرف من النص
+         ::first-line => يحدد أول سطر من النص
+         ::selection => يحدد الجزء المحدد من النص
+         ::placeholder => يحدد نص العنصر placeholder في حقول الإدخال
+      4- others pseudo-class
+         :root => يحدد عنصر الجذر (عادةً <html>)
+         :empty => يحدد العناصر التي لا تحتوي على أي محتوى
+         :nth-of-type(n) => يحدد العنصر رقم n من نوعه داخل الاب
+            exa: p:nth-of-type(2) => يحدد ثاني فقرة من نوعها داخل الاب
+         :only-child => يحدد العنصر الذي هو الطفل الوحيد داخل الاب
+         :only-of-type => يحدد العنصر الذي هو النوع الوحيد داخل الاب
+         :lang(language-code) => يحدد العناصر التي تحتوي على لغة معينة
+            exa: p:lang(en) => يحدد الفقرات المكتوبة باللغة الإنجليزية
+      5- pseudo-class for links
+         :link => يحدد الروابط غير المزارة
+         :visited => يحدد الروابط المزارة
+         :hover => يحدد العنصر عند وضع المؤشر عليه
+         :active => يحدد العنصر عند الضغط عليه
+      6- pseudo-class for forms
+         :focus => يحدد العنصر عند النقر عليه أو التركيز عليه
+         :valid => يحدد العنصر الذي يحتوي على قيمة صحيحة
+         :invalid => يحدد العنصر الذي يحتوي على قيمة غير صحيحة
+         :required => يحدد الحقول المطلوبة في النماذج
+         :optional => يحدد الحقول غير المطلوبة في النماذج
+      7- pseudo-class for structural elements
+         :first-child => يحدد أول عنصر من نوعه داخل الاب
+         :last-child => يحدد اخر عنصر من نوعه داخل الاب
+         :nth-child(n) => يحدد العنصر رقم n من نوعه داخل الاب
+            exa: p:nth-child(2) => يحدد ثاني فقرة داخل الاب
+         :nth-of-type(n) => يحدد العنصر رقم n من نوعه داخل الاب
+            exa: p:nth-of-type(2) => يحدد ثاني فقرة من نوعها داخل الاب
+         :only-child => يحدد العنصر الذي هو الطفل الوحيد داخل الاب
+         :only-of-type => يحدد العنصر الذي هو النوع الوحيد داخل الاب
+      8- pseudo-class for user interaction
+         :hover => يحدد العنصر عند وضع المؤشر عليه    
+         :focus => يحدد العنصر عند النقر عليه أو التركيز عليه
+         :active => يحدد العنصر عند الضغط عليه  
+      9- pseudo-class for content state
+         :empty => يحدد العناصر التي لا تحتوي على أي محتوى
+         :checked => يحدد العنصر المحدد (مثل checkbox أو radio)
+         :disabled => يحدد العنصر المعطل
+         :enabled => يحدد العنصر الممكّن
+      10- pseudo-class for language and direction
+         :lang(language-code) => يحدد العناصر التي تحتوي على لغة معينة  
+            exa: p:lang(en) => يحدد الفقرات المكتوبة باللغة الإنجليزية
+      11- pseudo-class for root element
+         :root => يحدد عنصر الجذر (عادةً <html>) 
+      12- pseudo-element for text formatting
+         ::first-letter => يحدد أول حرف من النص       
+         ::first-line => يحدد أول سطر من النص
+         ::selection => يحدد الجزء المحدد من النص
+         ::placeholder => يحدد نص العنصر placeholder في حقول الإدخال
+      13- pseudo-element for content insertion
+         ::before => يضيف محتوى قبل محتوى العنصر
+         ::after => يضيف محتوى بعد محتوى العنصر    
+      14- pseudo-element for list markers
+         ::marker => يحدد نمط العلامة المستخدمة في عناصر القائمة
+            exa: li::marker { color: red; font-size: 20px; content : "► "; }  
+      15- pseudo-element for table elements
+         ::before => يضيف محتوى قبل محتوى العنصر
+         ::after => يضيف محتوى بعد محتوى العنصر
+      16- pseudo-element for form elements
+         ::placeholder => يحدد نص العنصر placeholder في حقول الإدخال
+            
+
+   cascading order
+      order from largest to smallest 
+         !important  hight specificity always wins
+            exa: in internal #submit { background: red !important; }
+         inline 
+         id => #
+         p.text => p and .text , class => .
+         class => .
+         p or div or ...
+         if the same order alwayss winer the end 
+    
+         
+   compinator selectors
+      Descendant => par example .child p => selct all p 
+      child => par example .child p => the first son is chosen dirctly 
+      next sibling => par example .child p => the first element p after child and must have the same level 
+      Subsequent Sibling => par example .child p => choose all element p that come after child and must p and child the same number
+
+
+   input  
+      attribut 
+         placeholder : par example => placeholder="name" befor write text inside he appears name if debut write text suprime text name of the contrary value 
+         value not suprime name unless you delete it yourself
+
+
+   attribute selector
+      [attribute] =>apply to any element contains attribute whatever value 
+         exa : <p attribute>hllow every body</p> 
+      [attribute="value"] - لازم تكون مطابقة تماما 
+         input[type="text"] => exa: <input type="text" placeholder="...">
+      [attribute~="value"] - تحتوي على كلمة 
+         exa: [class~="button"] all attribut and contain word button independent in text in value
+      [attribute|="value"]
+         هدا يستخدم كثيرامع اللغة exa: [lang|="en"] => لقيمة إمّا تطابق تمامًا |=أو تبدأ بـ القيمة متبوعة بشرطة -
+      tag[attribut^="value"]
+         exa: a[herf^="https://"] => mean all tag a and attribut herf and debut value https://
+      tag[attribut$=".pdf"]
+         exa: a[herf$=".pdf"] => mean all tag a and attribut herf and end value .pdf
+      tag[attribut*=".pdf"] => mean ... and (begin midel end) value and integration in text
+
+
+   font
+      font-family => يحدد نوع الخط
+      font-size => يحدد حجم الخط
+      font-weight => يحدد سمك الخط
+      font-style => يحدد نمط الخط
+      font-variant => يحدد شكل الخط
+      font-shorthand => يحدد جميع خصائص الخط في سطر واحد
+      google fonts => موقع لتحميل خطوط مجانية
+   
+
+   text style
+      color => يحدد لون النص => color: value
+         name color => red blue green ...
+         hex color => #ff0000 #00ff00 #0000ff ...
+         rgb color => rgb(255,0,0) rgb(0,255,0) rgb(0,0,255)
+         rgba color => rgba(255,0,0,1) rgba(0,255,0,1) rgba(0,0,255,1) ... 1 => opaque 0 => transparent
+         hsl color => hsl(0,100%,50%) hsl(120,100%,50%) hsl(240,100%,50%)
+         hsla color => hsla(0,100%,50%,1) hsla(120,100%,50%,1) hsla(240,100%,50%,1) ... 1 => opaque 0 => transparent
+      
+      dirction => يحدد اتجاه النص => direction: value
+         rtl => من اليمين الى اليسار
+         ltr => من اليسار الى اليمين
+      
+      alignment => يحدد محاذاة النص => text-align: value
+         left => محاذاة النص الى اليسار
+         center => محاذاة النص الى الوسط
+         right => محاذاة النص الى اليمين
+         justify => محاذاة النص الى اليمين واليسار
+
+      decoration => يحدد زخرفة النص => text-decoration: value
+         none => لا يوجد زخرفة
+         underline => خط تحت النص
+         overline => خط فوق النص
+         line-through => خط وسط النص
+         blink => وميض النص
+         or يمكن دمج اكثر من زخرفة مع بعض
+
+      transform => transform text =>  text-transform: value
+         uppercase => all letters big 
+         lowercase => all letters small
+         capitalize => first letter big of each word
+         none => no change
+
+      spacing 
+         letter-spacing => يحدد المسافة بين الحروف
+         word-spacing => يحدد المسافة بين الكلمات
+         line-height => يحدد ارتفاع السطر
+         text-indent => يحدد مسافة بداية السطر
+         white-space => يحدد كيفية التعامل مع الفراغات في النص
+            normal => يحافظ على الفراغات كما هي
+            nowrap => يمنع الانتقال الى سطر جديد
+            pre => يحافظ على الفراغات كما هي ويسمح بالانتقال الى سطر جديد
+            pre-line => يحافظ على الفراغات كما هي ويسمح بالانتقال الى سطر جديد
+            pre-wrap => يحافظ على الفراغات كما هي ويسمح بالانتقال الى سطر جديد
+         
+      line hight => how much vertical space it takes 
+         normal => default value
+         number => multiplier of font size
+         length => specific value in px em rem %
+
+      shadow => shadow text => text-shadow: value
+         exa: text-shadow: 2px 2px 5px red; => 2px => horizontal shadow 2px => vertical shadow 5px => blur radius red => color shadow
+         
+
+   opacity => يحدد شفافية النص => opacity: value
+         1 => opaque
+         0 => transparent
+         0.5 => semi-transparent
+
+
+   background
+      background-color => background color: color-value ;
+         name or hex or rgb or rgba or hsl or hsla
+      background-image => background-image: url("image.jpg");
+         image types => jpg png gif svg webp
+      background-gradient => background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+         linear-gradient => تدرج لوني خطي
+         radial-gradient => تدرج لوني دائري
+         conic-gradient => تدرج لوني مخروطي
+      background-position => control the strting position of the background image => background-position: value ;
+         value => left center right top bottom px % em rem
+      background-attachment => determines if the background scrol with the page or stays fixed => background-attachment: value ;
+         scroll => الصورة تتحرك مع التمرير
+         fixed => الصورة تبقى ثابتة عند التمرير
+         local => الصورة تتحرك مع المحتوى الداخلي للعنصر عند التمرير
+         inherit => يرث القيمة من العنصر الأب
+      background-size => specifies the size of the background image => background-size: value ;
+         auto => الحجم الافتراضي للصورة
+         cover => تغطي العنصر بالكامل
+         contain => تحتوي الصورة داخل العنصر
+         heght and width => px % em rem => تحديد حجم الصورة بوحدات محددة
+      background-repeat => specifies if/how a background image is repeated => background-repeat: value ;
+         repeat => تكرار الصورة بشكل افتراضي
+         no-repeat => عدم تكرار الصورة
+         repeat-x => تكرار الصورة افقياً
+         repeat-y => تكرار الصورة عمودياً
+         space => تكرار الصورة مع ترك فراغات بينها
+         round => تكرار الصورة مع تمديدها لتملأ المساحة
+      background-clip => specifies the painting area of the background => background-clip: value ;
+         border-box => الخلفية تمتد لتشمل الحدود
+         padding-box => الخلفية تمتد لتشمل الحشو فقط
+         content-box => الخلفية تمتد لتشمل المحتوى فقط
+         text => الخلفية تمتد لتشمل النص فقط
+      background-origin => specifies the positioning area of the background image => background-origin: value ;
+         border-box => الصورة تبدأ من حدود العنصر
+         padding-box => الصورة تبدأ من حشو العنصر
+         content-box => الصورة تبدأ من محتوى العنصر
+
+
+   box model
+      margin => يحدد المسافة بين العنصر والعناصر المجاورة له
+      border => يحدد حدود العنصر => border: width style color ;
+         width => يحدد سمك الحدود
+         style => يحدد نمط الحدود
+            solid => خط متصل
+            dashed => خط متقطع
+            dotted => نقاط
+            double => خط مزدوج
+            groove => خط محفور
+            ridge => خط بارز
+            inset => خط داخلي
+            outset => خط خارجي
+            none => لا يوجد حدود
+         color => يحدد لون الحدود
+      padding => يحدد المسافة بين محتوى العنصر وحدوده => padding: value ;
+         value => px % em rem => تحديد المسافة بوحدات محددة
+      width => يحدد عرض العنصر
+      height => يحدد ارتفاع العنصر
+      Border
+         border => يحدد جميع جوانب الحدود في سطر واحد => border: width style color ;
+            border-top => يحدد جانب الأعلى من الحدود => border-top: width style color ;    
+            border-right => يحدد جانب الأيمن من الحدود => border-right: width style color ;
+            border-bottom => يحدد جانب الأسفل من الحدود => border-bottom: width style color ;
+            border-left => يحدد جانب الأيسر من الحدود => border-left: width style color ;
+         border-radius => يحدد انحناء زوايا العنصر => border-radius: value ;
+      outline => يحدد إطار خارجي للعنصر => outline: width style color ;
+         width => يحدد سمك الإطار
+         style => يحدد نمط الإطار
+         color => يحدد لون الإطار
+      box-shadow => يحدد ظل للصندوق => box-shadow: h-offset v-offset blur spread color ;
+         h-offset => يحدد الإزاحة الأفقية للظل
+         v-offset => يحدد الإزاحة العمودية للظل
+         blur => يحدد مدى تشتت الظل
+         spread => يحدد مدى انتشار الظل
+         color => يحدد لون الظل
+      box-sizing => يحدد كيفية حساب أبعاد العنصر
+         content-box => الحساب يشمل المحتوى فقط
+         border-box => الحساب يشمل المحتوى والحدود والحشو
+   
+
+   css units
+      absolute units
+         px => pixels
+         cm => centimeters
+         mm => millimeters
+         in => inches
+         pt => points
+         pc => picas
+      relative units
+         em => relative to the font-size of the element
+         rem => relative to the font-size of the root element
+         % => relative to the parent element
+         vw => relative to 1% of the viewport's width
+         vh => relative to 1% of the viewport's height
+         vmin => relative to 1% of the viewport's smaller dimension
+         vmax => relative to 1% of the viewport's larger dimension
+      functional units
+         calc() => allows for calculations to determine CSS property values
+         min() => selects the minimum value from a list of values
+         max() => selects the maximum value from a list of values
+         clamp() => clamps a value between an upper and lower bound
+
+
+   display
+      block => العنصر يظهر في سطر جديد ويأخذ العرض الكامل
+      inline => العنصر يظهر في نفس السطر ولا يأخذ العرض الكامل
+      inline-block => العنصر يظهر في نفس السطر ويأخذ العرض والارتفاع المحددين
+      none => العنصر لا يظهر ولا يأخذ أي مساحة
+      flex => يجعل العنصر حاوية مرنة لترتيب العناصر الداخلية
+      grid => يجعل العنصر حاوية شبكية لترتيب العناصر الداخلية
+      table => يجعل العنصر يتصرف كجدول
+      list-item => يجعل العنصر يتصرف كعنصر قائمة
+   
+
+   position
+      static => القيمة الافتراضية، العنصر يتبع التدفق الطبيعي للصفحة
+         top,left,right,bottom do not work
+      relative => العنصر يتموضع نسبياً بالنسبة لموقعه الأصلي
+         top,left,right,bottom work
+      absolute => العنصر يتموضع بالنسبة لأقرب عنصر أبوي غير ثابت
+         when work if parent have position relative we need in chiled position absolute
+         top,left,right,bottom work
+      fixed => العنصر يتموضع بالنسبة للنافذة ويظل في مكانه عند التمرير
+      sticky => العنصر يتموضع بشكل ثابت عندما يصل إلى نقطة معينة أثناء التمرير
+   
+
+   z-index => the order of element on the z-axis determines (الأمام والخلف)
+      higher value => the element appear in front of other elements
+      lower value => the element appear behind other elements
+   
+
+   css spiecificity
+      inline styles => 1000
+      id selectors => 0100
+      class, attribute, and pseudo-class selectors => ex .h =>  0010
+      element and pseudo-element selectors => ex h{} or div{} => 0001
+      universal selector (*) and combinators (+, >, ~, ' ') => 0
+   
+
+   table
+      <table> => defines a table
+      <thead> => defines the header section of a table
+      <tbody> => defines the body section of a table
+      <tfoot> => defines the footer section of a table
+      <tr> => defines a table row
+      <th> => defines a table header cell
+      <td> => defines a table data cell
+      <caption> => defines a table caption
+      border-collapse => يحدد كيفية عرض حدود الجدول
+         collapse => دمج الحدود المتجاورة
+         separate => عرض الحدود بشكل منفصل
+      border-spacing => يحدد المسافة بين خلايا الجدول
+      caption-side => يحدد موقع عنوان الجدول
+         top => أعلى الجدول
+         middle => وسط الجدول
+         bottom => أسفل الجدول
+      table-layout => يحدد كيفية توزيع الأعمدة في الجدول
+         auto => توزيع الأعمدة بناءً على المحتوى
+         fixed => توزيع الأعمدة بناءً على العرض المحدد
+   
+
+   lists
+      tag => ul ol li
+         ol => ordered list => قائمة مرتبة
+         ul => unordered list => قائمة غير مرتبة
+         li => list item => عنصر قائمة
+         inside tag ol or ul we can use properties
+            exa:  start="5" => to start number from 5 in ol tag
+                  reversed => to make the list in ol tag in reverse order
+      list-style-type => يحدد نوع العلامة المستخدمة في القائمة
+         disc => دائرة ممتلئة
+         circle => دائرة فارغة
+         square => مربع
+         decimal => أرقام عشرية
+         decimal-leading-zero => أرقام عشرية مع صفر بادئ
+         lower-alpha => حروف صغيرة
+         upper-alpha => حروف كبيرة
+         none => لا يوجد علامة
+      list-style-position => يحدد موقع العلامة بالنسبة للنص
+         inside => داخل النص
+         outside => خارج النص
+      list-style-image => يحدد صورة مخصصة كعلامة للقائمة
+         url("image.png") => تحديد مسار الصورة 
+      in style css we can control marker نقطه 
+         عن طريق ::marker 
+            exa: li::marker {
+                     color: red;
+                     font-size: 20px;
+                     content : "► ";
+                 }
+   
+
+   image and filters 
+      blend mode
+         mix-blend-mode => control blend entire element with what behinde it 
+            normal (defult) => no belding 
+            multiply => darkens colors by multiplying them 
+            screen => negtion multiply ,used for glow and light effects
+            overlay => combines multiply and screen ,strong contrast ,very popular
+            darken => keeps only the darker color 
+            lighten => keeps only the lighter color
+            difference => subtracts colors from each other ,creates inverted effect
+            exclusion => similar to difference but with lower contrast
+            color => applies the hue and saturation of the blend color to the luminosity of the base color
+            luminosity => applies the luminosity of the blend color to the hue and saturation of the base color
+         background-blend-mode => control blend background layers => work if background-image + background-color and not work with tag img
+            normal (defult) => no belding 
+            multiply => darkens colors by multiplying them 
+            screen => negtion multiply ,used for glow and light effects
+            overlay => combines multiply and screen ,strong contrast ,very popular
+            darken => keeps only the darker color 
+            lighten => keeps only the lighter color
+            difference => subtracts colors from each other ,creates inverted effect
+            exclusion => similar to difference but with lower contrast
+            color => applies the hue and saturation of the blend color to the luminosity of the base color
+            luminosity => applies the luminosity of the blend color to the hue and saturation of the base color 
+      backdrop-filter => يضيف تأثيرات بصرية على خلفيات العناصر
+         blur(px) => يضيف تأثير التمويه
+         brightness(%) => يحدد سطوع الخلفية
+         contrast(%) => يحدد تباين الخلفية
+         grayscale(%) => يحول الخلفية إلى تدرج رمادي
+         hue-rotate(deg) => يغير درجة اللون في الخلفية
+         invert(%) => يعكس ألوان الخلفية
+         sepia(%) => يضيف تأثير اللون البني الداكن على الخلفية
+         drop-shadow(offset-x offset-y blur color) => يضيف ظل للخلفية
+      filter => يضيف تأثيرات بصرية على الصور والعناصر
+         blur(px) => يضيف تأثير التمويه
+         brightness(%) => يحدد سطوع الصورة
+         contrast(%) => يحدد تباين الصورة
+         grayscale(%) => يحول الصورة إلى تدرج رمادي
+         hue-rotate(deg) => يغير درجة اللون في الصورة
+         invert(%) => يعكس ألوان الصورة
+         sepia(%) => يضيف تأثير اللون البني الداكن
+         drop-shadow(offset-x offset-y blur color) => يضيف ظل للصورة
+   
+
+   website layout
+      we can  select all css with way *
+
+      box-sizing:border-box => يجعل عرض و ارتفاع العنصر يشمل الحشو و الحدود
+      display:
+         flex => يجعل العنصر حاوية مرنة لترتيب العناصر الداخلية
+
+      flaot => يحدد اتجاه العنصر
+         left => يحدد اتجاه العنصر إلى اليسار
+         right => يحدد اتجاه العنصر إلى اليمين
+         none => لا يوجد اتجاه
+         clear => يحدد كيفية التعامل مع العناصر العائمة
+      
+      over-flow
+
+
+   grid
+      display: grid => يجعل العنصر حاوية شبكية لترتيب العناصر الداخلية
+      inline-grid => يجعل العنصر حاوية شبكية وترتيب العناصر الداخلية في نفس السطر
+      grid-template-colunS = numbre of colunms and size
+         => : value value value => the mean 3 colume  ,the maximum number of columns is 12 and the size can be px % em rem auto fr repeat(3, 1fr) => the mean 3 colume with the same size
+                                 => fr => fractional unit => 1fr => the mean 1 part of the available space after distribute the space between columns with size auto and fixed size
+                                 => auto => the mean the size of the column is determined by the content of the column
+         repeat => repeat(3, 1fr) => the mean 3 colume with the same size
+      grid-template-rows = numbre of rows and size
+         the same with grid-template-colunms
+      row-gap => يحدد المسافة بين الصفوف
+      column-gap => يحدد المسافة بين الأعمدة
+      gap => : "row-gap" "column gap" => يحدد المسافة بين الصفوف والأعمدة
+      justify-content => is flex element and work this proprtiy just with auto not fr
+         => :flex-end
+         => :flex-start
+         => :center 
+         => :space-between => first element at the start and last element at the end and space between them
+         => :space-around => space before first element and after last element is half of the space between elements
+         => :space-evenly => space before first element and after last element is the same as the space between elements
+      align-content => is flex element and work this proprtiy just with auto not fr
+         => :flex-end => In bottom of the container
+         => :flex-start => In top of the container
+         => :center => In the middle of the container
+         => :space-between => first element at the start and last element at the end and space between them
+         => :space-around => space before first element and after last element is half of the space between elements
+         => :space-evenly => space before first element and after last element is the same as the space between elements
+      grid-template-areas => يحدد مناطق الشبكة باستخدام أسماء المناطق
+         => : "header header header"
+              "sidebar main main"
+              "footer footer footer" => the mean 3 row and 3 colume and the first row is header and the second row is sidebar and main and the third row is footer
+              after that we can put element in area by grid-area: header the mean the element will be in the area named header
+         minmax => minmax(100px, 300px) => the mean the size of the column will be at least 100px and at most 300px
+         auto-fill => auto-fill(100px) => the mean the number of columns will be as many as possible with a minimum size of 100px
+         repeat => repeat(auto-fill, minmax(100px, 1fr)) => the mean the number of columns will be as many as possible with a minimum size of 100px and a maximum size of 1fr
+      grid-column => يحدد موقع العنصر في الأعمدة
+         => : 1 / 3 => the mean the element will start from column 1 and end at column 3 
+         => : span 2 => the mean the element will span 2 columns or the mean satrt from column 1 and end at column 3
+         => : 1 / span 2 => the mean the element will start from column 1 and span 2 columns or the mean start from column 1 and end at column 3
+         => : 1 the mean the element will start from column 1 and end at column 2
+      grid-row => يحدد موقع العنصر في الصفوف
+         => : 1 / 3 => the mean the element will start from row 1 and end at row 3
+         => : span 2 => the mean the element will span 2 rows or the mean start from row 1 and end at row 3
+         => : 1 / span 2 => the mean the element will start from row 1 and span 2 rows or the mean start from row 1 and end at row 3
+      grid-area => يحدد المنطقة التي يشغلها العنصر في الشبكة
+         grid-row-start => يحدد بداية الصف الذي يشغلها العنصر
+            we can value negative value => the mean count from the end of the grid
+         grid-row-end => يحدد نهاية الصف الذي يشغلها العنصر
+         grid-column-start => يحدد بداية العمود الذي يشغلها العنصر
+         grid-column-end => يحدد نهاية العمود الذي يشغلها العنصر
+         grid-area => يحدد المنطقة التي يشغلها العنصر في الشبكة
+            => : grid-row-start / grid-row-end / grid-column-start / grid-column-end
+         : header => the mean the element will be in the area named header 
+         : cont => get the block of row 
+       
+   
+   cntre element in box
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+
+      display: grid;
+      place-items: center;
+
+
+
+      
+   background-position => تحديد مكان الصورة
+      left => يحدد المسافة بين العنصر واليسار
+      top => يحدد المسافة بين العنصر والاعلى
+      bottom => يحدد المسافة بين العنصر والاسفلى
+      right => يحدد المسافة بين العنصر و اليمين 
+
+
+   transform => يحدد موقع العنصر
+   background-size: cover => تغطية العنصر بالصورة
+   background-size: contain => تحتوي الصورة داخل العنصر
+
+   top right bottom left
+   padding => اتجاه عقارب الساعة
+   - لضبط العنصر في الوسط بشكل افقي وعمودي
+   position: absolute;               
+      top: 50%;
+      left: 50%;
+   transform: translate(-50%, -50%);
+   background => مساحة العنصر 
+   padding => background مسافة بين كتابة و حدود 
+   margin =>  background and limit page مسافة بين حدود 
+   لكتابة البوردر يجب تعيين لون و ستيل و سمك ستيل 
+   border => اطار العنصر 
+   border => 1px solid red
+   outline => 2px solid red
+   display block => يظهر العنص
+   display none => لا يظهر العنصرو مكانه يختفي
+   visibility hidden  => لا يظهر العنصر ولكن مكانه يبقى
+   opacity => يحدد شفافية العنصر
+   .hh,.kk,.ff,.kk{}لتقليص الكود يمكننا تجميع الاكواد المتشابه في النداء واحد ويكتب 
+   nisting =>div p تنسيق شئ نصل اليه بواسطة الاحداثيات مثال 
+   the call used ex .hh:hover => meaning when arrive cursuer above cell change format 
+   display inline-block => يظهر العنصر بشكل مستطيل حسب الطول الكلمة 
+      inline block => respict the width and height and pading and margin
+      inline => respect the pading [just left + right] and margin do not respect the width and height
+      block => respect the width and height do not respect the pading and margin
+   width => مسافة الطول
+   height => الارتفاع
+   width: fit-content; => مسافة تتانسب مع النص
+   overflow hidden =>  النص الزائد يختفي لي يكون اكبر من باكروند
+   overflow scroll =>  النص الزائد يظهر بالاسفل
+   text-shadow =>  يطلب (ظل افقي) سالب يسار و موجب يمين( وظل عمودي )سالب اعلى و موجب اسفل ودرجة الظل و يطلب لون
+   text-shadow => يضيف ظل للنص
+   text-align (right or left) => يحدد مكان النص
+   direction: rtl => يحدد اتجاه النص مثال هذا في العربية
+               ltr => يحدد اتجاه النص مثال هذا في الانجليزية
+   vertical-align: middle => يحدد مكان النص بالعمود وسط العنصر
+                    bottom => يحدد مكان النص بالعمود اسفل العنصر
+                    top => يحدد مكان النص بالعمود اعلى العنصر
+   text-decoration: none => يزيل الخط السفلي من النص
+   text-decoration: underline => يضيف خط سفلي للنص 
+   text-decoration: overline => يضيف خط فوقي للنص
+   text-decoration: line-through => يضيف خط وسطي للنص
+   text-decoration: blink => يجعل النص يومض
+   text-transform: uppercase => يحول النص الى حروف كبيرة
+   text-transform: lowercase => يحول النص الى حروف صغيرة
+   text-transform: capitalize => يحول الحرف الاول من كل كلمة الى حرف كبير
+   letter-spacing: 2px; => يضيف مسافة بين الحروف تصغير بالقيمة سالبة و تكبير بالقيمة الموجبة
+   word-spacing: 2px; => يضيف مسافة بين الكلمات تصغير بالقيمة سالبة و تكبير بالقيمة الموجبة
+   text-indent: 50px; => يضيف مسافة بين النص والحدود معناه هامش النص
+   line-height: 2; => يضيف مسافة بين الاسطر تصغير بالقيمة سالبة و تكبير بالقيمة الموجبة
+   white-space: normal; => يحافظ على النص كما هو مكتوب ويحافظ على الفراغات ويسمح بالانتقال الى سطر جديد
+   white-space: nowrap; => يمنع النص من الانتقال الى سطر جديد
+   white-space: pre; => يحافظ على النص كما هو مكتوب
+   white-space: pre-line; => يحافظ على النص كما هو مكتوب ويحافظ على الفراغات
+   white-space: pre-wrap; => يحافظ على النص كما هو مكتوب ويحافظ على الفراغات ويحافظ على الانتقال الى سطر جديد
+   word-wrap: break-word; => يمنع النص من الانتقال الى سطر جديد
+   word-break: break-all; => يمنع النص من الانتقال الى سطر جديد
+   word-break: keep-all; => يحافظ على النص كما هو مكتوب ويحافظ على الفراغات ويحافظ على الانتقال الى سطر جديد
+   inherit => يطبق خصائص الاصلي   
+   1rem => 16px
+   vw => viewport مساحة المتصفح
+
+      
+   calc => يحسب القيمة في سطر الكود
+   z-index => يحدد ترتيب العناصر
+   position => يحدد مكان العنصر
+      position: relative; => يحدد مكان العنصر بالنسبة للعناصر الاخرى
+      position: absolute; => يحدد مكان العنصر بالنسبة للصفحة
+      position: fixed; => يحدد مكان العنصر بالنسبة للشاشة
+      position: static; => يحدد مكان العنصر بالنسبة للعناصر الاخرى
+      position: sticky; => يحدد مكان العنصر بالنسبة للعناصر الاخرى ويظل ثابت عند التمرير
+      opacity =>  يحدد شفافية العنصر معناه شفافية للكتابة ولون
+      background-color(color/شفافية) =>  يحدد لون الخلفيةو شفافية للون
+      background-image =>  يضيف صورة للخلفية
+   min-height position sticky top:0px => يحدد مكان العنصر بالنسبة للعناصر الاخرى ويظل ثابت عند التمريرa
+   z-index => يحدد ترتيب العناصر
+
+
+
+   units
+      vh => viewport height 
+
+
+
+
+
+
+
+
