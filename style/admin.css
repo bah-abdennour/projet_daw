@@ -20,20 +20,20 @@ body{
 }
 
 .container{
-  display:flex;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
   height:100vh;
 }
 
 /* LEFT SIDE */
 .left{
-  flex:1;
+  /* take half width like before */
   background: radial-gradient(circle at top, #1a1033, #05050a);
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+  display:grid;
+  place-items:center;
   text-align:center;
   padding:40px;
+  row-gap:20px; /* spacing between stacked items */
 }
 
 .logo{
@@ -91,9 +91,10 @@ input:focus{
 .remember{
   font-size:14px;
   color:#aaa;
-  display:flex;
+  display:grid;
+  grid-auto-flow: column;
   align-items:center;
-  gap:8px;
+  column-gap:8px;
   margin-bottom:15px;
 }
 
@@ -131,7 +132,8 @@ button:hover{
 }
 
 .social{
-  display:flex;
+  display:grid;
+  grid-auto-flow: column;
   gap:10px;
   margin-top:20px;
 }
