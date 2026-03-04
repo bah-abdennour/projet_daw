@@ -61,15 +61,15 @@
   }
 
   .logo-wrap {
-    padding: 24px 20px 20px;
+    padding: 10px 0px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
     border-bottom: 1px solid var(--border);
   }
 
   .logo-img {
-    width: 52px;
+    width: 100px;
     height: 52px;
     object-fit: contain;
     filter: drop-shadow(0 0 10px var(--purple-glow));
