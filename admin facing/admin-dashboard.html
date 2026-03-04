@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lunar Arc Gym – Dashboard</title>
+<link href="../style/admin-dashbored.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="ambient amb1"></div>
+<div class="ambient amb2"></div>
+
+<!-- ══ SIDEBAR ══ -->
+<aside class="sidebar">
+  <div class="logo-wrap">
+    <img class="logo-img" src="../photo/ChatGPT Image Feb 27, 2026, 02_58_02 PM.png" alt="Lunar Arc Gym">
+    <div>
+      <div class="logo-text">LUNAR<span> ARC</span></div>
+      <div class="logo-sub">Gym Management</div>
+    </div>
+  </div>
+
+  <div class="nav-label">Main Menu</div>
+  <nav>
+    <div class="nav-item active">
+      <span class="nav-icon">⊞</span> Dashboard
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">👤</span> Members
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">🏋</span> Classes
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">📋</span> Plans
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">✉️</span> Messages
+      <span class="badge">2</span>
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">⎋</span> Logout
+    </div>
+  </nav>
+
+  <div class="sidebar-footer">© 2025 Lunar Arc Gym</div>
+</aside>
+
+<!-- ══ MAIN ══ -->
+<main class="main">
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="page-title">Dashboard</div>
+    <div class="topbar-right">
+      <div class="admin-pill">Admin</div>
+      <div class="topbar-gym">Lunar Arc Management</div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+
+    <!-- Stat Cards -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">👥</div>
+        <div class="stat-value">5</div>
+        <div class="stat-label">Total Members</div>
+        <div class="stat-sub">↑ Active this month</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📄</div>
+        <div class="stat-value">5</div>
+        <div class="stat-label">Active Subscriptions</div>
+        <div class="stat-sub">Most popular: Gold</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🏆</div>
+        <div class="stat-value">8</div>
+        <div class="stat-label">Classes / Week</div>
+        <div class="stat-sub">Across all trainers</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">💰</div>
+        <div class="stat-value">10,500</div>
+        <div class="stat-label">Est. Revenue (DZD)</div>
+        <div class="stat-sub">Based on active plans</div>
+      </div>
+    </div>
+
+    <!-- Lower Grid -->
+    <div class="lower-grid">
+
+      <!-- Recent Registrations -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">Recent Registrations</div>
+          <div class="view-all">View All →</div>
+        </div>
+        <table class="reg-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Plan</th>
+              <th>Joined</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Youcef Belaid</td>
+              <td><span class="plan-badge silver">SILVER</span></td>
+              <td>2025-03-01</td>
+            </tr>
+            <tr>
+              <td>Lina Cherif</td>
+              <td><span class="plan-badge gold">GOLD</span></td>
+              <td>2025-02-10</td>
+            </tr>
+            <tr>
+              <td>Mohamed Aït</td>
+              <td><span class="plan-badge bronze">BRONZE</span></td>
+              <td>2025-01-20</td>
+            </tr>
+            <tr>
+              <td>Sara Hamidi</td>
+              <td><span class="plan-badge silver">SILVER</span></td>
+              <td>2025-02-01</td>
+            </tr>
+            <tr>
+              <td>Karim Bensalem</td>
+              <td><span class="plan-badge gold">GOLD</span></td>
+              <td>2025-01-15</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Members by Plan -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">Members by Plan</div>
+        </div>
+        <div class="mbp-body">
+          <div class="mbp-row">
+            <div class="mbp-label">Bronze</div>
+            <div class="mbp-bar-track">
+              <div class="mbp-bar-fill bronze">1</div>
+            </div>
+          </div>
+          <div class="mbp-row">
+            <div class="mbp-label">Silver</div>
+            <div class="mbp-bar-track">
+              <div class="mbp-bar-fill silver">2</div>
+            </div>
+          </div>
+          <div class="mbp-row">
+            <div class="mbp-label">Gold</div>
+            <div class="mbp-bar-track">
+              <div class="mbp-bar-fill gold">2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unread Messages -->
+    <div class="panel msg-panel">
+      <div class="panel-header">
+        <div class="panel-title">Unread Messages</div>
+        <div class="view-all">View All →</div>
+      </div>
+      <div class="msg-item">
+        <div class="msg-avatar">YB</div>
+        <div class="msg-content">
+          <div class="msg-name">Youcef Belaid</div>
+          <div class="msg-preview">Hi, I'd like to upgrade my plan to Gold this month...</div>
+        </div>
+        <div class="msg-time">2h ago</div>
+      </div>
+      <div class="msg-item">
+        <div class="msg-avatar">LC</div>
+        <div class="msg-content">
+          <div class="msg-name">Lina Cherif</div>
+          <div class="msg-preview">Can I reschedule my class session on Thursday?</div>
+        </div>
+        <div class="msg-time">5h ago</div>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+</main>
+
+</body>
+</html>
