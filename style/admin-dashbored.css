@@ -13,7 +13,7 @@
     --text:        #e8e6f0;
     --text-muted:  #7a7896;
     --green:       #22c97b;
-    --sidebar-w:   240px;
+    --sidebar-w:   180px;
 }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
