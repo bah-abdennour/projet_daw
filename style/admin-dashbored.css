@@ -16,7 +16,9 @@
     --sidebar-w:   162px;
 }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { 
+    box-sizing: border-box; margin: 0; padding: 0;
+}
 
 body {
     font-family: 'Exo 2', sans-serif;
@@ -30,7 +32,6 @@ body {
 body::before {
     content: '';
     position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
     pointer-events: none;
     z-index: 0;
     opacity: .5;
@@ -173,7 +174,6 @@ li{
     z-index: 1;
 }
 
-/* ── Topbar ── */
 .topbar {
     display: flex;
     align-items: center;
@@ -244,11 +244,11 @@ li{
     overflow: hidden;
     transition: border-color .2s, transform .2s;
 }
+
 .stat-card:hover {
     border-color: var(--purple);
     transform: translateY(-2px);
 }
-
 
 .stat-card::before {
     content: '';
