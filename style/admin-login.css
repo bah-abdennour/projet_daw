@@ -147,6 +147,12 @@ button{
     transition:.3s;
 }
 
+.button-submit{
+    background:linear-gradient(135deg, var(--purple-main), var(--purple-glow));
+    text-decoration: none;
+    color: white;
+}
+
 button:hover{
     transform:translateY(-2px);
     box-shadow:0 0 15px rgba(122,60,255,.6);
