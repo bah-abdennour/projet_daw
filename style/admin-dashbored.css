@@ -123,13 +123,11 @@ nav { flex: 1 ; }
 .dashboard.active{
     color: var(--purple);
     text-decoration: none;
-    display: block;
 }
 
 .dashboard{
     color: var(--silver-dim,var(--text));
     text-decoration: none;
-    display:flex;
 }
 
 .line{
