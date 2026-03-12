@@ -5,38 +5,53 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>LAG A-Members</title>
-        <link rel="stylesheet" href="../../style/admin-members.css">
+        <link rel="stylesheet" href="/style/admin-members.css">
     </head>
 
     <body>
-        <aside>
-            <div class="sidebar"><span>LUNAR</span> ARC</div>
-            <div>Gym Management</div>
+        <div class="ambient amb1"></div>
+        <div class="ambient amb2"></div>
+
+        <aside class="sidebar">
+            <div class="logo-wrap">
+                <div>
+                    <div class="logo-text">LUNAR <span>ARC</span></div>
+                    <div class="logo-sub">Gym Management</div>
+                </div>
+            </div>
             <div>
-                <a class="nav-item dashboard active" href="#">
+                <a class="nav-item" href="./admin-dashboard.html">
                     <span class="nav-icon">📊</span>Dashboard
                 </a>
-                <a class="nav-item dashboard" href="./admin-members.html">
+                <a class="nav-item active" href="./admin-members.html">
                     <span class="nav-icon">👤</span>Members
                 </a>
-                <a class="nav-item dashboard" href="#">
-                <span class="nav-icon">🗓️</span>Classes
+                <a class="nav-item" href="#">
+                    <span class="nav-icon">🗓️</span>Classes
                 </a>
-                <a class="nav-item dashboard" href="#">
-                <span class="nav-icon">💳</span>Subscriptions
+                <a class="nav-item " href="#">
+                    <span class="nav-icon">💳</span>Subscriptions
                 </a>
-                <a class="nav-item dashboard" href="#">
-                <span class="nav-icon">🏋</span>Trainers
+                <a class="nav-item" href="#">
+                    <span class="nav-icon">🏋</span>Trainers
                 </a>
-                <a class="nav-item dashboard line" href="#">
-                <span class="nav-icon">✉️</span>Messages
-                <span class="badge">2</span>
+                <a class="nav-item line" href="#">
+                    <span class="nav-icon">✉️</span>Messages
+                    <span class="badge">2</span>
                 </a>
-                <a class="nav-item dashboard " href="../admin-login.html">
-                <span class="nav-icon">⎋</span>Logout
+                <a class="nav-item " href="../admin-login.html">
+                    <span class="nav-icon">⎋</span>Logout
                 </a>
-                <div class="sidebar-footer">© 2025 Lunar Arc Gym</div>
             </div>
+            <div class="sidebar-footer">© 2025 Lunar Arc Gym</div>
         </aside>
+        <main class="main">
+            <div class="toolbar">
+                <div class="toolbar-left">Members</div>
+                <div class="toolbar-right">
+                    <div class="toolbar-right-admin">Admin</div>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
