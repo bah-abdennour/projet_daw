@@ -29,15 +29,6 @@ body {
     overflow-x: hidden;
 }
 
-body::before {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 0;
-    opacity: .5;
-}
-
 .sidebar {
     width: var(--sidebar-w);
     min-height: 100vh;
@@ -47,7 +38,6 @@ body::before {
     flex-direction: column;
     position: fixed;
     top: 0; left: 0; bottom: 0;
-    z-index: 10;
     overflow: hidden;
 }
 
@@ -85,8 +75,6 @@ body::before {
     text-transform: uppercase;
 }
 
-nav { flex: 1 ; }
-
 .nav-item {
     display: flex;
     align-items: center;
@@ -94,7 +82,6 @@ nav { flex: 1 ; }
     padding: 11px 20px;
     cursor: pointer;
     position: relative;
-    transition: all .2s;
     color: var(--silver-dim);
     font-size: .85rem;
     font-weight: 500;
@@ -108,26 +95,25 @@ nav { flex: 1 ; }
     color: var(--text);
 }
 
-.nav-item.active {
+.active {
     color: var(--purple);
     background: linear-gradient(90deg, rgba(123,47,255,.18) 0%, transparent 100%);
 }
 
-.nav-item.active::before {
+.active::before {
     position: absolute;
     top: 0; left: 0; bottom: 0;
     content: '';
-    width: 3px;
+    width: 4px;
     background: linear-gradient(180deg, var(--purple), var(--purple-mid));
     border-radius: 0 4px 4px 0;
 }
 
-.line{
-    border-bottom: 1px solid var(--border) ;
-    margin-bottom: 15px;
+.nav-icon { 
+    font-size: 1.1rem; 
+    width: 20px; 
+    text-align: center; 
 }
-
-.nav-icon { font-size: 1.1rem; width: 20px; text-align: center; }
 
 .badge {
     margin-left: auto;
@@ -144,6 +130,7 @@ nav { flex: 1 ; }
     border-top: 1px solid var(--border);
     font-size: .75rem;
     color: var(--silver-dim);
+    margin-top: auto;
 }
 
 .main {
@@ -153,7 +140,6 @@ nav { flex: 1 ; }
     flex-direction: column;
     min-height: 100vh;
     position: relative;
-    z-index: 1;
 }
 
 .toolbar {
@@ -165,12 +151,11 @@ nav { flex: 1 ; }
     background: rgba(7,6,15,.85);
     position: sticky;
     top: 0;
-    z-index:5;
 }
 
 .page-title {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: .18em;
     text-transform: uppercase;
@@ -180,18 +165,11 @@ nav { flex: 1 ; }
     content: '';
     display: block;
     height: 2px;
-    width: 40%;
     background: linear-gradient(90deg, var(--purple), transparent);
     margin-top: 3px;
 }
 
 .toolbar-right { 
-    display: flex; 
-    align-items: center; 
-    gap: 14px; 
-}
-
-.admin-pill {
     background: linear-gradient(135deg, var(--purple), #5b21b6);
     color: #fff;
     font-size: .72rem;
@@ -222,7 +200,6 @@ nav { flex: 1 ; }
     padding: 22px 22px 18px;
     position: relative;
     overflow: hidden;
-    transition: border-color .2s, transform .2s;
 }
 
 .stat-card:hover {
@@ -304,7 +281,6 @@ nav { flex: 1 ; }
     color: var(--purple-mid);
     cursor: pointer;
     letter-spacing: .05em;
-    transition: color .4s;
 }
 
 .view-all:hover { 
@@ -408,7 +384,6 @@ nav { flex: 1 ; }
     font-size: .95rem;
     font-weight: 700;
     color: var(--bg-deep);
-    transition: width .6s cubic-bezier(.4,0,.2,1);
 }
 
 .mbp-bar-fill.gold { 
@@ -432,7 +407,6 @@ nav { flex: 1 ; }
     gap: 14px;
     padding: 14px 22px;
     border-bottom: 1px solid rgba(36,30,62,.6);
-    transition: background .15s;
     cursor: pointer;
 }
 
@@ -480,31 +454,6 @@ nav { flex: 1 ; }
     font-size: .65rem; 
     color: var(--silver-dim); 
     flex-shrink: 0; 
-}
-
-.ambient {
-    position: fixed;
-    border-radius: 50%;
-    pointer-events: none;
-    filter: blur(120px);
-    opacity: .12;
-    z-index: 0;
-}
-
-.amb1 { 
-    width: 600px; 
-    height: 600px; 
-    background: var(--purple); 
-    top: -200px; 
-    left: 100px; 
-}
-
-.amb2 { 
-    width: 400px; 
-    height: 400px; 
-    background: #3b0764; 
-    bottom: -100px; 
-    right: 200px; 
 }
 
 @keyframes fadeUp {
