@@ -4,7 +4,9 @@
     --purple-glow: #b993ff;
     --silver: #dcdcdc;
     --panel: #14141d;
-    --input: #1c1c27;
+    --bg-hover: #15122a;
+    --button: linear-gradient(135deg, var(--purple-main), var(--purple-glow));
+
 }
 
 *{
@@ -104,11 +106,11 @@ body{
 
 input:not([type="checkbox"]){
     width:100%;
-    padding:12px;
+    padding:18px;
     margin-bottom:12px;
     border:none;
-    border-radius:8px;
-    background:var(--input);
+    border-radius:30px;
+    background:var(--bg-hover);
     color:rgb(247, 240, 240);
 }
 
@@ -135,19 +137,17 @@ input:focus:not([type="checkbox"]){
 
 button{
     width:100%;
-    padding:14px;
+    padding:15px;
     margin-top:15px;
     border:none;
-    border-radius:10px;
-    background:linear-gradient(135deg, var(--purple-main), var(--purple-glow));
+    border-radius:25px;
+    background: var(--button);
     color:white;
     font-weight:bold;
     cursor:pointer;
-    transition:.3s;
 }
 
 .button-submit{
-    background:linear-gradient(135deg, var(--purple-main), var(--purple-glow));
     text-decoration: none;
     color: white;
 }

@@ -190,3 +190,22 @@ Careers
 Help center  
 Privacy & terms
 Admin page login
+
+
+## color
+    --purple-main: #7a3cff;
+    --purple-glow: #b993ff;
+    --purple-mid:  rgba(123,47,255,.35);
+    --silver:      #c4c4d4;
+    --silver-dim:  #6e6e8a;
+    --gold:        #e0a840;
+    --gold-dim:    #8a6320;
+    --bronze:      #c07840; 
+    --bronze-dim:  rgba(160,100,40,.15);
+    --text:        #e8e6f0;
+    --text-muted:  #7a7896;
+    --border:      #241e3e;
+    --bg-card:     #0f0d1c; //any box 
+    --bg-hover:    #15122a; // for        example box input, any box inside box --bg-card: #0f0d1c;
+    --button: linear-gradient(135deg, var(--purple-main), var(--purple-glow));
+    
