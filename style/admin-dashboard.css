@@ -3,9 +3,9 @@
     --bg-card:     #0f0d1c;
     --bg-hover:    #15122a;
     --border:      #241e3e;
-    --purple-main: #7a3cff;
-    --purple-glow: #a855f7;
-    --purple-mid:  rgba(123,47,255,.35);
+    --purple-main: #5f3dc4;
+    --purple-glow: #9f8bdc;
+    --purple-mid:  rgba(95,61,196,.35);
     --silver:      #c4c4d4;
     --silver-dim:  #6e6e8a;
     --gold:        #e0a840;
@@ -51,7 +51,7 @@ body {
 .amb2 { 
     width: 400px; 
     height: 400px; 
-    background: #3b0764; 
+    background: #5f3dc4; 
     bottom: -100px; 
     right: 200px; 
 }
@@ -124,7 +124,7 @@ body {
 
 .nav-item.active {
     color: var(--purple-main);
-    background: linear-gradient(90deg, rgba(123,47,255,.18) 0%, transparent 100%);
+    background: linear-gradient(90deg, rgba(95,61,196,.18) 0%, transparent 100%);
 }
 
 .nav-item.active::before {
@@ -149,7 +149,7 @@ body {
 }
 
 .sidebar-footer {
-    padding: 16px 27px;
+    padding: 16px 21px;
     border-top: 1px solid var(--border);
     font-size: .75rem;
     color: var(--silver-dim);
@@ -195,7 +195,7 @@ body {
 }
 
 .toolbar-right { 
-    background: linear-gradient(135deg, var(--purple-main), #5b21b6);
+    background: linear-gradient(135deg, var(--purple-main), #5f3dc4);
     color: #fff;
     font-size: .72rem;
     font-weight: 700;
@@ -221,7 +221,7 @@ body {
     flex: 1 0 180px;
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: 30px;
+    border-radius: 15px;
     padding: 22px 18px;
     position: relative;
     overflow: hidden;
@@ -280,7 +280,8 @@ body {
     flex:1 1 310px;
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: 30px;
+    border-radius: 15px;
+    padding: 0 20px;
     overflow: hidden;
 }
 
@@ -446,13 +447,13 @@ body {
 .msg-avatar {
     width: 36px; height: 36px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--purple-main), #3b0764);
+    background: linear-gradient(135deg, var(--purple-main), #5f3dc4);
     display: flex; align-items: center; justify-content: center;
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
     font-size: .85rem;
     flex-shrink: 0;
-    border: 1px solid rgba(123,47,255,.4);
+    border: 1px solid rgba(95,61,196,.4);
 }
 
 .msg-content { 

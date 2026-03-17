@@ -3,9 +3,9 @@
     --bg-card:     #0f0d1c;
     --bg-hover:    #15122a;
     --border:      #241e3e;
-    --purple-main: #7a3cff;
-    --purple-glow: #a855f7;
-    --purple-mid:  rgba(123,47,255,.35);
+    --purple-main: #5f3dc4;
+    --purple-glow: #9f8bdc;
+    --purple-mid:  rgba(95,61,196,.35);
     --silver:      #c4c4d4;
     --silver-dim:  #6e6e8a;
     --gold:        #e0a840;
@@ -15,6 +15,7 @@
     --text:        #e8e6f0;
     --text-muted:  #7a7896;
     --green:       #22c97b;
+    --button: linear-gradient(135deg, var(--purple-main), var(--purple-glow));
     --sidebar-w:   170px;
 }
 
@@ -51,7 +52,7 @@ body {
 .amb2 { 
     width: 400px; 
     height: 400px; 
-    background: #3b0764; 
+    background: #5f3dc4; 
     bottom: -100px; 
     right: 200px; 
 }
@@ -86,7 +87,7 @@ body {
 }
 
 .logo-text {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: "Segoe UI", sans-serif;
     font-weight: 700;
     font-size: 1.3rem;
     letter-spacing: .08em;
@@ -124,7 +125,7 @@ body {
 
 .nav-item.active {
     color: var(--purple-main);
-    background: linear-gradient(90deg, rgba(123,47,255,.18) 0%, transparent 100%);
+    background: linear-gradient(90deg, rgba(95,61,196,.18) 0%, transparent 100%);
 }
 
 .nav-item.active::before {
@@ -149,7 +150,7 @@ body {
 }
 
 .sidebar-footer {
-    padding: 16px 27px;
+    padding: 16px 21px;
     border-top: 1px solid var(--border);
     font-size: .75rem;
     color: var(--silver-dim);
@@ -162,6 +163,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 .toolbar {
@@ -177,7 +179,7 @@ body {
 }
 
 .toolbar-left {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: "Segoe UI", sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: .18em;
@@ -195,7 +197,7 @@ body {
 }
 
 .toolbar-right {
-    background: linear-gradient(135deg, var(--purple-main), #5b21b6);
+    background: linear-gradient(135deg, var(--purple-main), #5f3dc4);
     color: #fff;
     font-size: .72rem;
     font-weight: 700;
@@ -213,14 +215,217 @@ body {
     gap: 30px;
 }
 
-.card {
-    flex: 1;
-    background: var(--bg-card);
-    border-radius: 30px;
+.card-one {
+    flex: 1 0 200px;
+    padding: 0 15px;
+    background: var(--bg-card) ;
+    border-radius: 15px;
+    z-index: 0;
+    display: flex;
+    flex-flow: row wrap;
 }
 
-.card {
-    flex: 1;
-    background: var(--bg-card);
-    border-radius: 30px;
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
+
+tbody {
+    font-size: smaller;
+}
+
+tr th {
+    text-align: left;
+}
+
+tr {
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    padding: 15px;
+    color: var(--silver);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    padding-bottom: 0.8rem;
+}
+
+td {
+    padding: 1rem 0.2rem 0.5rem 0;
+    padding-left:15px ;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+td.fir {
+    font-size:larger;
+    font-weight: 700;
+}
+
+tbody tr:first-child .fir {
+    color: var(--bronze);
+}
+
+tbody tr:nth-child(2) .fir {
+    color: var(--silver-dim);
+}
+
+tbody tr:last-child .fir {
+    color: var(--gold);
+}
+
+tbody tr:first-child {
+    background: linear-gradient(90deg, rgba(95,61,196,.18) 0%, transparent 100%);
+}
+
+tbody tr:nth-child(3) {
+    background: linear-gradient(90deg, rgba(95,61,196,.18) 0%, transparent 100%);
+}
+
+.modife {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5px;
+}
+
+.modife button {
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.modife button:first-child {
+    color: rgb(96, 165, 250);
+    background: rgba(42, 109, 217, 0.2);
+    border-color: rgba(42, 109, 217, 0.4);
+}
+
+.modife button:first-child:hover {
+    box-shadow: 0 0 5px #5f09f6;
+}
+
+.modife button:last-child {
+    color: rgb(248, 113, 113);
+    background: rgba(214, 48, 48, 0.2);
+    border-color: rgba(214, 48, 48, 0.4);
+}
+
+.modife button:last-child:hover {
+    box-shadow: 0 0 5px #fc0019 ;
+}
+
+.card-two {
+    flex: 1 0 200px;
+    padding: 0 15px;
+    background: var(--bg-card) ;
+    border-radius: 15px;
+    z-index: 0;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.plans {
+    font-family: "Segoe UI", sans-serif;
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--text);
+    padding: 10px;
+}
+
+.input {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.input div {
+    flex: 1 0 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin:9px 0 0 0;
+}
+
+.input div p {
+    font-size: 12px;
+    color: var(--silver-dim);
+    margin-left: 13px ;
+
+}
+
+div input {
+    margin-top: 5px;
+    padding: 15px;
+    border-radius: 15px;
+    background: var(--bg-hover);
+    border: 1px;
+    color: #fff;
+}
+
+div input:focus {
+    outline:2px solid var(--purple-main);
+}
+
+.desc {
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 5px;
+    margin:9px 0 10px 0;
+
+}
+
+.desc p {
+    font-size: 12px;
+    color: var(--silver-dim);
+    margin: 12px 0 0 13px;
+}
+
+.desc input {
+    height: 55%;
+}
+
+.button {
+    padding: 10px 0;
+    display: flex;
+}
+
+.button button {
+    flex: 0 1 150px;
+    padding: 5px 5px ;
+    background: var(--button);
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid;
+    cursor: pointer;
+    font-size:medium;
+}
+
+.button button:last-child {
+    margin-left: 10px;
+}
+
+.button button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 15px rgba(122,60,255,.6);
+}
+
+
+
+
+
+

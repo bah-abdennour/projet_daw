@@ -1,7 +1,7 @@
 :root{
     --dark: #0b0b12;
-    --purple-main: #7a3cff;
-    --purple-glow: #b993ff;
+    --purple-main: #5f3dc4;
+    --purple-glow: #9f8bdc;
     --silver: #dcdcdc;
     --panel: #14141d;
     --bg-hover: #15122a;
@@ -58,7 +58,7 @@ body{
 .logo{
     width:303px;
     height: auto;
-    margin-bottom:20px;
+    margin-bottom:50px;
     filter: drop-shadow(0 0 20px rgba(122,60,255,0.6));
 }
 
@@ -109,7 +109,7 @@ input:not([type="checkbox"]){
     padding:18px;
     margin-bottom:12px;
     border:none;
-    border-radius:30px;
+    border-radius:15px;
     background:var(--bg-hover);
     color:rgb(247, 240, 240);
 }
