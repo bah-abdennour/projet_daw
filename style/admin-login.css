@@ -115,7 +115,7 @@ input:not([type="checkbox"]){
 }
 
 input:focus:not([type="checkbox"]){
-     outline:2px solid var(--purple-main);
+    outline:2px solid var(--purple-main);
 }
 
 .remember{
